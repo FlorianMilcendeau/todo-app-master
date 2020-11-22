@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import { todosSelectors } from '../todosSelectors';
+import { filteredTodoSelector } from '../todosSelectors';
 import { toggleTodoAction, deleteTodoAction } from '../todosActions';
 
 import TodoList from '../../components/TodoList';
 
 const mapStateToProps = (state) => ({
-  todos: todosSelectors(state),
+  todos: filteredTodoSelector(state),
 });
 
 // eslint-disable-next-line react-redux/mapDispatchToProps-prefer-shorthand
