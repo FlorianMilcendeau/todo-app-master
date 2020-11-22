@@ -1,10 +1,14 @@
 import React from 'react';
-import { store } from './redux/index';
+import { Provider } from 'react-redux';
+
+import store from './redux/store';
 
 function App() {
-  store.subscribe(() => console.log(store.getState()));
-
-  return <div className="App">Hello World</div>;
+  return (
+    <Provider store={store}>
+      <div className="App">Hello World</div>
+    </Provider>
+  );
 }
 
 export default App;
