@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../css/Todolist.module.css';
+
 const TodoList = ({ todos, onToggle, onDelete }) => {
   return (
-    <ul>
+    <ul className={styles.list}>
       {todos.map((todo) => (
         <li key={todo.id}>
           <input
