@@ -19,6 +19,7 @@
         "react/jsx-uses-vars": "error",
         "no-plusplus": "off",
         "import/prefer-default-export": "off",
+        "react-redux/mapDispatchToProps-prefer-shorthand": "off",
         "no-underscore-dangle": ["error", { "allow": ["__REDUX_DEVTOOLS_EXTENSION__"] }]
     }
 }

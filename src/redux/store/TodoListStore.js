@@ -8,7 +8,6 @@ const mapStateToProps = (state) => ({
   todos: filteredTodoSelector(state),
 });
 
-// eslint-disable-next-line react-redux/mapDispatchToProps-prefer-shorthand
 const mapDispatchToProps = (dispatch) => ({
   onToggle: (todo) => dispatch(toggleTodoAction(todo)),
   onDelete: (todo) => dispatch(deleteTodoAction(todo)),

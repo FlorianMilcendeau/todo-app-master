@@ -10,7 +10,6 @@ const mapStateToProps = (state) => ({
   filter: filterSelector(state),
 });
 
-// eslint-disable-next-line react-redux/mapDispatchToProps-prefer-shorthand
 const mapDispatchToProps = (dispatch) => ({
   onChange: (value) => dispatch(filterAction(value)),
 });
