@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../css/Input.module.css';
+
 const Input = ({ onAdd }) => {
   const [value, setvalue] = useState('');
 
@@ -16,9 +18,14 @@ const Input = ({ onAdd }) => {
   };
 
   return (
-    <form onSubmit={(e) => postTodo(e)}>
-      <input type="text" value={value} onChange={(e) => handleInput(e)} />
-      <input type="submit" value="Add" />
+    <form className={styles.wrapperForm} onSubmit={(e) => postTodo(e)}>
+      <input
+        className={styles.input}
+        type="text"
+        value={value}
+        onChange={(e) => handleInput(e)}
+      />
+      <input className={styles.inputButton} type="submit" value="Add" />
     </form>
   );
 };

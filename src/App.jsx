@@ -6,12 +6,16 @@ import FilterTodoStore from './redux/store/FilterTodoStore';
 import InputAddStore from './redux/store/InputAddStore';
 import TodoListStore from './redux/store/TodoListStore';
 
+import styles from './css/App.module.css';
+
 function App() {
   return (
     <Provider store={store}>
-      <FilterTodoStore />
-      <InputAddStore />
-      <TodoListStore />
+      <div className={styles.App}>
+        <FilterTodoStore />
+        <InputAddStore />
+        <TodoListStore />
+      </div>
     </Provider>
   );
 }

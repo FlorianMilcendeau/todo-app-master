@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../css/Todolist.module.css';
+import iconDelete from '../assets/icons/delete.svg';
+
 const TodoList = ({ todos, onToggle, onDelete }) => {
   return (
-    <ul>
+    <ul className={styles.list}>
       {todos.map((todo) => (
-        <li key={todo.id}>
+        <li key={todo.id} className={styles.item}>
           <input
             id={`todo${todo.id}`}
             type="checkbox"
@@ -13,8 +16,12 @@ const TodoList = ({ todos, onToggle, onDelete }) => {
             checked={todo.completed}
           />
           <label htmlFor={`todo${todo.id}`}>{todo.title}</label>
-          <button type="button" onClick={() => onDelete(todo)}>
-            X
+          <button
+            className={styles.delete}
+            type="button"
+            onClick={() => onDelete(todo)}
+          >
+            <img src={iconDelete} alt="delete icon" />
           </button>
         </li>
       ))}
