@@ -1,12 +1,9 @@
 export const todosSelectors = ({ todos }) => todos;
 
 export const filteredTodoSelector = ({ todos, filter }) => {
+  console.log(todos);
   if (todos.length > 0) {
-    if (filter === null) {
-      return todos;
-    }
-
-    return todos.filter((todo) => todo.completed === filter);
+    return todos.filter((todo) => filter === null || todo.completed === filter);
   }
 
   return todos;
