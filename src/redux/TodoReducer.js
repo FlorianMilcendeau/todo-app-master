@@ -2,8 +2,9 @@ if (localStorage.getItem('todos') === null) {
   localStorage.setItem('todos', []);
 }
 
-const storage =
-  JSON.parse(localStorage.getItem('todos')) || localStorage.getItem('todos');
+const localStore = localStorage.getItem('todos');
+
+const storage = localStore.length > 0 ? JSON.parse(localStore) : localStore;
 
 const lastIndex = storage.length;
 
