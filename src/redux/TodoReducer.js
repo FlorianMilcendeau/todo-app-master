@@ -15,6 +15,7 @@ const initialState = storage;
 export const ADD_TODO_ACTION = 'ADD_TODO_ACTION';
 export const UPDATE_TODO_ACTION = 'UPDATE_TODO_ACTION';
 export const DELETE_TODO_ACTION = 'DELETE_TODO_ACTION';
+export const DELETE_ALL_TODO_ACTION = 'DELETE_ALL_TODO_ACTION';
 
 export const todoReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -46,6 +47,12 @@ export const todoReducer = (state = initialState, action) => {
       localStorage.setItem('todos', JSON.stringify(newState));
 
       return newState;
+    }
+
+    case DELETE_ALL_TODO_ACTION: {
+      localStorage.setItem('todos', []);
+
+      return [];
     }
     default:
       return state;
