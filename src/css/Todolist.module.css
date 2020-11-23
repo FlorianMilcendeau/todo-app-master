@@ -16,7 +16,13 @@
   border-top: 0.5px solid #dbdbdb;
 }
 
+.label {
+  max-width: 21rem;
+  word-wrap: break-word;
+}
+
 .delete {
+  outline: none;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -28,4 +34,33 @@
   font-weight: bold;
   color: #b20c31;
   font-size: 1.5rem;
+}
+
+.buttonDelete {
+  outline: none;
+  display: flex;
+  align-items: center;
+  border: 0.1rem solid #b20c31;
+  color: #880c27;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  padding: 0.5rem 2rem;
+  margin-right: 0;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.buttonDelete:hover {
+  background-color: #b20c3011;
+}
+
+@media screen and (max-width: 768px) {
+  .list {
+    width: 90vw;
+  }
+
+  .label {
+    max-width: 70vw;
+  }
 }

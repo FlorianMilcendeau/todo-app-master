@@ -7,3 +7,5 @@ export const filteredTodoSelector = ({ todos, filter }) => {
 
   return todos;
 };
+
+export const filterSelector = ({ filter }) => filter;

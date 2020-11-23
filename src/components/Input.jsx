@@ -7,14 +7,16 @@ const Input = ({ onAdd }) => {
   const [value, setvalue] = useState('');
 
   const handleInput = async (e) => {
-    await setvalue(e.target.value);
+    await setvalue(e.target.value.trimStart());
   };
 
   const postTodo = (e) => {
     e.preventDefault();
-    onAdd(value);
-    setvalue('');
-    e.target.focus();
+    if (value.length > 0) {
+      onAdd(value);
+      setvalue('');
+      e.target.focus();
+    }
   };
 
   return (

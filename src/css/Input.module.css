@@ -18,14 +18,38 @@
 
 .inputButton {
   background-color: #1a73e8;
+  outline: none;
   border: none;
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
   padding: 0rem 2rem;
-  height: 75%;
+  height: 74%;
   cursor: pointer;
   color: #fff;
   position: absolute;
   top: 1rem;
   right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapperForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .input {
+    width: 70vw;
+    padding: 0;
+  }
+
+  .inputButton {
+    margin-top: 0.5rem;
+    border-radius: 0.3rem;
+    position: initial;
+    width: 71.5vw;
+    padding: 1rem;
+  }
 }

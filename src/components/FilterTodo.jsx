@@ -14,20 +14,20 @@ const FilterTodo = ({ filter, onChange }) => (
       All
     </button>
     <button
+      className={`${styles.button} ${filter === false && styles.active}`}
+      disabled={filter === false}
+      onClick={() => onChange(false)}
+      type="button"
+    >
+      Active
+    </button>
+    <button
       className={`${styles.button} ${filter === true && styles.active}`}
       disabled={filter === true}
       onClick={() => onChange(true)}
       type="button"
     >
       Completed
-    </button>
-    <button
-      className={`${styles.button} ${filter === false && styles.active}`}
-      disabled={filter === false}
-      onClick={() => onChange(false)}
-      type="button"
-    >
-      To do
     </button>
   </div>
 );

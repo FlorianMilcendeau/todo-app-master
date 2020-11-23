@@ -12,6 +12,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className={styles.App}>
+        <h1>Todo</h1>
         <FilterTodoStore />
         <InputAddStore />
         <TodoListStore />
