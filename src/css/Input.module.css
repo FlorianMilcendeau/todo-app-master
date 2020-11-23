@@ -1,15 +1,19 @@
 .wrapperForm {
   position: relative;
   border-top: 0.5px solid #bdbdbd;
-  padding-top: 1rem;
   width: 25rem;
 }
 
 .input {
+  margin-top: 1rem;
   padding-right: 6rem;
   width: 18rem;
   font-size: 1.2rem;
   height: 2.5rem;
+}
+
+.input:focus {
+  outline-color: #1a73e8;
 }
 
 .inputButton {
@@ -17,9 +21,11 @@
   border: none;
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
-  padding: 0.5rem 2rem;
-  height: 2.6rem;
+  padding: 0rem 2rem;
+  height: 75%;
+  cursor: pointer;
   color: #fff;
   position: absolute;
+  top: 1rem;
   right: 0;
 }
