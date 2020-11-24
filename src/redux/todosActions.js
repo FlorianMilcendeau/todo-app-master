@@ -1,6 +1,6 @@
 import {
   ADD_TODO_ACTION,
-  DELETE_ALL_TODO_ACTION,
+  DELETE_COMPLETED_TODO_ACTION,
   DELETE_TODO_ACTION,
   UPDATE_TODO_ACTION,
 } from './TodoReducer';
@@ -21,5 +21,5 @@ export const addTodoAction = (value) => ({
 });
 
 export const deleteAllTodo = () => ({
-  type: DELETE_ALL_TODO_ACTION,
+  type: DELETE_COMPLETED_TODO_ACTION,
 });
